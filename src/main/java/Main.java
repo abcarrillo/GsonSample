@@ -43,6 +43,7 @@ public class Main {
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String json = gson.toJson(p);
 		
+		
 		System.out.println("\n" + json);
 	}
 }
