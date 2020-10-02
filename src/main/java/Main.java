@@ -17,14 +17,14 @@ public class Main {
 			System.out.println("Nombre (no puede estar vacio):");
 			nombre = sc.nextLine();
 		} while (nombre == "");
-		System.out.println("Nombre introducido: " + nombre);
+		System.out.println("Nombre introducido: " + nombre + "\n");
 		
 		
 		do {
 			System.out.println("Apellidos (no puede estar vacio):");
 			apellidos = sc.nextLine();
 		} while (apellidos == "");
-		System.out.println("Apellidos introducidos: " + apellidos);
+		System.out.println("Apellidos introducidos: " + apellidos + "\n");
 		
 		
 		do {
@@ -36,13 +36,13 @@ public class Main {
 				comprobante = false;
 			}
 		} while (!comprobante);
-		System.out.println("Edad introducida: " + edad);
+		System.out.println("Edad introducida: " + edad + "\n");
 		
 		
 		Persona p = new Persona(nombre, apellidos, edad);
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String json = gson.toJson(p);
 		
-		System.out.println(json);
+		System.out.println("\n" + json);
 	}
 }
